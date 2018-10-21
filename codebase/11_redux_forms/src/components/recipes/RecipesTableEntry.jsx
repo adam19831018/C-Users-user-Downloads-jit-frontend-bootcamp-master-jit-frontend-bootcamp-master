@@ -26,7 +26,7 @@ export default class RecipesTableEntry extends React.PureComponent {
 
 RecipesTableEntry.propTypes = {
   mealName: PropTypes.string.isRequired,
-  preparationTime: PropTypes.number.isRequired,
+  preparationTime: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   difficulty: PropTypes.oneOf(["Easy", "Intermediate", "Difficult"]).isRequired,
   onRecipeSelected: PropTypes.func.isRequired,
 }
