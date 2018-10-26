@@ -1,6 +1,6 @@
-# JIT Frontend Bootcamp - January 2018
+# JIT Frontend Bootcamp - October 2018
 
-- [JIT Frontend Bootcamp - January 2018](#jit-frontend-bootcamp---january-2018)
+- [JIT Frontend Bootcamp - October 2018](#jit-frontend-bootcamp---october-2018)
   - [Codebases](#codebases)
     - [00 - Base](#00---base)
     - [01 - React base](#01---react-base)
