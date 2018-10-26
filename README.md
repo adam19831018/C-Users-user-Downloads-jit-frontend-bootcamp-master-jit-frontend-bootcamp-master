@@ -1,6 +1,6 @@
-# JIT Frontend Bootcamp - January 2018
+# JIT Frontend Bootcamp - October 2018
 
-- [JIT Frontend Bootcamp - January 2018](#jit-frontend-bootcamp---january-2018)
+- [JIT Frontend Bootcamp - October 2018](#jit-frontend-bootcamp---october-2018)
   - [Codebases](#codebases)
     - [00 - Base](#00---base)
     - [01 - React base](#01---react-base)
@@ -10,7 +10,7 @@
     - [05 - List renderings and lifecycle hooks](#05---list-renderings-and-lifecycle-hooks)
     - [06 - `React.PureComponent`](#06---reactpurecomponent)
     - [07 - Error handling](#07---error-handling)
-    - [09 - Redux store](#09---redux-store)
+    - [08 - Redux store](#08---redux-store)
     - [09 - Recipes store](#09---recipes-store)
     - [10 - "Selected Recipe" screen](#10---selected-recipe-screen)
     - [11 - Fetching the data from external API](#11---fetching-the-data-from-external-api)
@@ -34,7 +34,7 @@ In this section we are getting rid of unnecessary wrapper components and render 
 At this stage we are starting to utilize `React.PureComponent` class to reduce the number of wasted renderings. Lifecycle hooks created for that particular reason have been removed.
 ### 07 - Error handling
 Utilizing React error handling mechanism to catch and recover from runtime exceptions.
-### 09 - Redux store
+### 08 - Redux store
 This section presents the general idea of Redux state management. The store contains only the "selected tab id" state (to allow navigating through different scenes) and based on that we are creating both action and reducer, which later are getting connected to components promoted to containers.
 ### 09 - Recipes store
 In this chapter we are extending the model of the application state to make it aware of all recipes-related data.
