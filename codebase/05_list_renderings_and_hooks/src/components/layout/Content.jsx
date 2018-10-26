@@ -6,37 +6,6 @@ import RecipesContainer from "../recipes/RecipesContainer"
 export default class Content extends React.Component {
   constructor(props) {
     super(props)
-
-    console.info("Content MOUNT: constructor(), props:", props)
-  }
-
-  componentWillMount() {
-    console.info("Content MOUNT: componentWillMount()")
-  }
-
-  componentDidMount() {
-    console.info("Content MOUNT: componentDidMount()")
-  }
-
-  componentWillReceiveProps(nextProps) {
-    console.info("Content UPDATE: componentWillReceiveProps(), nextProps:", nextProps)
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log("Content UPDATE: shouldComponentUpdate(), nextProps:", nextProps,
-      "nextState:", nextState)
-
-    return this.props.activeTabId !== nextProps.activeTabId
-  }
-
-  componentWillUpdate(nextProps, nextState) {
-    console.info("Content UPDATE: componentWillUpdate(), nextProps:", nextProps,
-      "nextState:", nextState)
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    console.info("Content UPDATE: componentDidUpdate(), prevProps:", prevProps,
-      "prevState:", prevState)
   }
 
   getContentForTab(activeTabId) {
@@ -52,7 +21,6 @@ export default class Content extends React.Component {
   }
 
   render() {
-    console.info("Content render()")
     const { activeTabId } = this.props
 
     return (

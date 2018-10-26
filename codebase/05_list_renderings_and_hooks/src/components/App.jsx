@@ -13,6 +13,19 @@ export default class App extends React.Component {
     }
 
     this.setActiveTabId = this.setActiveTabId.bind(this)
+
+    console.info("App RENDER PHASE: constructor(), props:", props)
+  }
+
+  static getDerivedStateFromProps(props, state) {
+    console.info("App RENDER PHASE: static getDerivedStateFromProps(), props:", props, "state:", state)
+    return { activeTabId: state.activeTabId }
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    console.info("App RENDER PHASE: static getDerivedStateFromProps(), nextProps:", nextProps,
+      "nextState:", nextState)
+    return true
   }
 
   setActiveTabId(newTabId) {
@@ -21,7 +34,23 @@ export default class App extends React.Component {
     })
   }
 
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    console.info("App PRE-COMMIT PHASE: getSnapshotBeforeUpdate(), prevProps:", prevProps,
+      "prevState:", prevState)
+    return { foo: "bar" }
+  }
+
+  componentDidMount() {
+    console.info("App COMMIT PHASE: componentDidMount()")
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.info("App COMMIT PHASE: componentDidUpdate(), prevProps:", prevProps,
+      "prevState:", prevState, "snapshot:", snapshot)
+  }
+
   render() {
+    console.info("App RENDER PHASE: render()")
     const { activeTabId } = this.state
 
     /* Not possible in react 16> */

@@ -5,14 +5,6 @@ import RecipesTable from "./RecipesTable"
 import * as DataSource from "services/recipes/mock"
 
 export default class RecipesContainer extends React.Component {
-  componentDidMount() {
-    console.warn("RecipesContainer mounted")
-  }
-
-  componentWillUnmount() {
-    console.warn("RecipesContainer will unmount")
-  }
-
   render() {
     return (
       <div className="wrapper">
